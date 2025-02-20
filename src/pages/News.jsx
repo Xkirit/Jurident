@@ -24,6 +24,8 @@ function News() {
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth < 640) {
+          setSlidesPerView(1);
+        } else if (window.innerWidth < 768) {
           setSlidesPerView(2);
         } else if (window.innerWidth < 1024) {
           setSlidesPerView(3);
@@ -79,16 +81,16 @@ function News() {
         <div className="z-50">
           <Navbar />
         </div>
-        <main className="flex-1 container mx-auto px-6 py-8 max-w-6xl relative z-10 mt-5">
+        <main className="flex-1 container mx-auto px-4 sm:px-6 sm:py-8 max-w-6xl relative z-10 sm:mt-5">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-8">Latest News</h1>
+            <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-8">Latest News</h1>
           </div>
           
           {/* News Carousel */}
-          <div className="mb-8 max-w-5xl mx-auto">
+          <div className="mb-4 sm:mb-8 max-w-5xl mx-auto">
             <Swiper
-              slidesPerView={slidesPerView}
-              spaceBetween={20}
+              slidesPerView={3}
+              spaceBetween={10}
               navigation={true}
               loop={true}
               centeredSlides={true}
@@ -110,10 +112,10 @@ function News() {
                     <img 
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-32 sm:h-40 object-cover rounded-lg"
+                      className="w-full h-24 sm:h-32 md:h-40 object-cover rounded-lg"
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                      <p className="absolute bottom-2 left-2 right-2 text-xs text-white">
+                      <p className="absolute bottom-2 left-2 right-2 text-[10px] sm:text-xs md:text-sm text-white line-clamp-2">
                         {item.title}
                       </p>
                     </div>
@@ -124,17 +126,17 @@ function News() {
           </div>
 
           {/* Featured News Title */}
-          <div className="mb-8 text-center max-w-3xl mx-auto">
-            <h2 className="text-xl font-semibold">
+          <div className="mb-4 sm:mb-8 text-center max-w-3xl mx-auto px-4">
+            <h2 className="text-base sm:text-xl font-semibold line-clamp-2 sm:line-clamp-none">
               {newsItems[activeSlide].title}
             </h2>
           </div>
 
           {/* News List */}
-          <div className="space-y-6 max-w-3xl mx-auto">
+          <div className="space-y-3 sm:space-y-6 max-w-3xl mx-auto px-4">
             {newsItems.map(item => (
-              <div key={item.id} className="flex gap-4 items-center hover:bg-white/5 p-3 rounded-lg transition-colors cursor-pointer">
-                <div className="w-12 h-12 flex-shrink-0">
+              <div key={item.id} className="flex gap-2 sm:gap-4 items-center hover:bg-white/5 p-2 sm:p-3 rounded-lg transition-colors cursor-pointer">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
                   <img 
                     src={item.image}
                     alt={item.title}
@@ -142,7 +144,9 @@ function News() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-sm font-medium">{item.title}</h3>
+                  <h3 className="text-xs sm:text-sm font-medium line-clamp-2 sm:line-clamp-none">
+                    {item.title}
+                  </h3>
                 </div>
               </div>
             ))}

@@ -43,7 +43,7 @@ const CalendarComponent = () => {
   };
 
   return (
-    <div className="mt-10 h-96 mx-auto p-1">
+    <div className="mb-10 z-10 h-96 mx-auto p-1">
       <div className=" rounded-xl p-6 shadow-lg">
         <Calendar
           onChange={setDate}

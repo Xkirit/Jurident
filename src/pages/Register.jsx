@@ -17,37 +17,48 @@ function Register() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="flex justify-center items-center text-white pt-20 flex-col">
-        
+      <div className="flex justify-center items-center text-white p-4 sm:pt-20 relative z-0">
         {/* Pop-up Message */}
         {message && (
-          <div className="bg-green-500 text-white px-4 py-2 rounded-lg mb-4">
+          <div className="fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg z-50">
             {message}
           </div>
         )}
 
         {/* Container for Image and Text */}
-        <div className="flex flex-row items-center justify-center space-x-10 w-4/5">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 w-full max-w-4xl">
           
-          {/* Lawyer Image */}
+          {/* Lawyer Image - Larger sizes for all screens */}
           <div className="flex-shrink-0">
-            <img src={LawyerImage} alt="lawyer" className="w-30 h-66 object-contain" />
+            <img 
+              src={LawyerImage} 
+              alt="lawyer" 
+              className="w-auto h-48 sm:h-64 md:h-72 lg:h-96 object-contain" 
+            />
           </div>
 
           {/* Text and Buttons */}
-          <div className="flex flex-col items-center">
-            <div className="text-3xl text-yellow-400 mb-6">Welcome to Jurident!</div>
+          <div className="flex flex-col items-center w-full sm:w-auto">
+            <div className="text-2xl sm:text-3xl text-yellow-400 mb-6 text-center">Welcome to Jurident!</div>
             
             {/* Selection Buttons */}
-            <div className="flex flex-row items-center space-x-4 mb-4">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-6 w-full sm:w-auto">
               <button
-                className={`px-6 py-2 rounded ${selectedRole === "Lawyer/Student" ? "bg-orange-500 text-white" : "bg-white text-black"}`}
+                className={`px-6 py-2 rounded w-full sm:w-auto ${
+                  selectedRole === "Lawyer/Student" 
+                    ? "bg-orange-500 text-white" 
+                    : "bg-white text-black"
+                }`}
                 onClick={() => handleSelection("Lawyer/Student")}
               >
                 Lawyer / Student
               </button>
               <button
-                className={`px-6 py-2 rounded ${selectedRole === "Client" ? "bg-orange-500 text-white" : "bg-white text-black"}`}
+                className={`px-6 py-2 rounded w-full sm:w-auto ${
+                  selectedRole === "Client" 
+                    ? "bg-orange-500 text-white" 
+                    : "bg-white text-black"
+                }`}
                 onClick={() => handleSelection("Client")}
               >
                 Client
@@ -55,9 +66,11 @@ function Register() {
             </div>
 
             {/* Login and Sign-Up Buttons */}
-            <div className="flex flex-col items-center space-y-4"> 
+            <div className="flex flex-col items-center gap-4 w-full sm:w-auto"> 
               <button 
-                className={`px-6 py-2 rounded bg-blue-500 text-white w-40 ${!selectedRole && "opacity-50 cursor-not-allowed"}`} 
+                className={`px-6 py-2 rounded bg-blue-500 text-white w-full sm:w-40 ${
+                  !selectedRole && "opacity-50 cursor-not-allowed"
+                }`} 
                 disabled={!selectedRole}
               >
                 <Link to={selectedRole === "Lawyer/Student" ? "/LawyerSignIn" : selectedRole === "Client" ? "/ClientSignIn" : "#"}>
@@ -65,7 +78,9 @@ function Register() {
                 </Link>
               </button>
               <button 
-                className={`px-6 py-2 rounded bg-white text-black w-40 ${!selectedRole && "opacity-50 cursor-not-allowed"}`} 
+                className={`px-6 py-2 rounded bg-white text-black w-full sm:w-40 ${
+                  !selectedRole && "opacity-50 cursor-not-allowed"
+                }`} 
                 disabled={!selectedRole}
               >
                 <Link to={selectedRole === "Lawyer/Student" ? "/LawyerSignUp" : selectedRole === "Client" ? "/ClientSignUp" : "#"}>

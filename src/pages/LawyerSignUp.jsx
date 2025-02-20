@@ -4,19 +4,14 @@ import Header from "../components/Header"
 
 function LawyerSignUp() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#0B0B26]">
       <Header />
-      <div className="flex-1 flex items-center justify-center text-white px-4 mt-8">
-        {/* Main Container */}
-        <div className="flex flex-col md:flex-row items-center md:items-start w-full max-w-3xl space-x-6">
-          
-          {/* Lawyer Image */}
-          <div className="hidden md:block">
+      <div className="flex-1 flex items-center justify-center text-white p-4">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-3xl gap-6">
+          <div className="hidden md:block md:flex-shrink-0">
             <img src={LawyerImage} alt="Lawyer" className="h-56 object-contain" />
           </div>
-
-          {/* Sign-Up Form */}
-          <div className="p-5 rounded-lg shadow-lg w-full max-w-sm">
+          <div className="w-full max-w-sm p-5 rounded-lg shadow-lg bg-[#0B0B26]/50 backdrop-blur-sm">
             <h2 className="text-2xl font-semibold text-yellow-500 text-center">Sign Up</h2>
             <p className="text-center text-gray-300 mt-1 text-sm">
               Become a legal eagle! Login and spread your wings in the courtroom.
