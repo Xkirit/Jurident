@@ -18,11 +18,11 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex gap-6">
-        <Link to="/" className={`${getLinkClass('/')} hover:text-[#CDA454]`}>Home</Link>
+        <Link to="/cases" className={`${getLinkClass('/')} hover:text-[#CDA454]`}>Home</Link>
         <Link to="/calendar" className={getLinkClass('/calendar')}>Calendar</Link>
         <Link to="/news" className={getLinkClass('/news')}>News</Link>
-        <Link to="/bare-act" className={getLinkClass('/bare-act')}>Bare Act PDF</Link>
-        <Link to="/contact" className={getLinkClass('/contact')}>Contact Us</Link>
+        <Link to="/bareact" className={getLinkClass('/bareact')}>Bare Act PDF</Link>
+        <Link to="/contactus" className={getLinkClass('/contactus')}>Contact Us</Link>
         <Link to="/profile" className={getLinkClass('/account')}>Account</Link>
     
       </div>
