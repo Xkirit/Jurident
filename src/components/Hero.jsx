@@ -1,5 +1,7 @@
 import Carousel from '../pages/Carousel'
 import Header from './Header'
+import Footer from './Footer'
+
 
 function Hero() {
   return (
@@ -8,6 +10,7 @@ function Hero() {
       <div className="flex-1">
         <Carousel/>
       </div>
+      <Footer/>
     </div>
   )
 }
