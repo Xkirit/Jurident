@@ -8,22 +8,22 @@ function ClientSignIn() {
     <div className="min-h-screen flex flex-col bg-[#0B0B26]">
       <Header/>
       <div className="flex-1 flex items-center justify-center text-white p-4">
-        {/* Main Container */}
+        
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-3xl gap-6">
           
-          {/* Lawyer Image */}
+   
           <div className="hidden md:block md:flex-shrink-0">
             <img src={LawyerImage} alt="Lawyer" className="h-56 object-contain" />
           </div>
 
-          {/* Sign-In Form */}
+        
           <div className="w-full max-w-sm p-5 rounded-lg shadow-lg bg-[#0B0B26]/50 backdrop-blur-sm">
             <h2 className="text-xl sm:text-2xl font-semibold text-yellow-500 text-center">Sign In</h2>
             <p className="text-center text-gray-300 mt-1 text-sm">
               Become a legal eagle! Login and spread your wings in the courtroom.
             </p>
 
-            {/* Join as Lawyer */}
+       
             <h3 className="text-md font-medium text-yellow-400 text-center mt-3">Join as Client</h3>
 
            

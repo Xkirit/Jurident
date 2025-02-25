@@ -27,6 +27,7 @@ const Navbar = () => {
           <Link to="/cases" className={getLinkClass('/cases')}>Home</Link>
           <Link to="/calendar" className={getLinkClass('/calendar')}>Calendar</Link>
           <Link to="/news" className={getLinkClass('/news')}>News</Link>
+          <Link to="/aboutus" className={getLinkClass('/aboutus')}>About Us</Link>
           <Link to="/bareact" className={getLinkClass('/bareact')}>Bare Act PDF</Link>
           <Link to="/contactus" className={getLinkClass('/contactus')}>Contact Us</Link>
           <Link to="/profile" className={getLinkClass('/profile')}>Account</Link>
@@ -85,6 +86,13 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 News
+              </Link>
+              <Link 
+                to="/aboutus" 
+                className={`${getLinkClass('/aboutus')} py-2`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
               </Link>
               <Link 
                 to="/bareact" 
