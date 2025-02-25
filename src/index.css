@@ -13,29 +13,26 @@ body {
 .background-circle {
   position: fixed;
   border-radius: 50%;
-  border: 100px solid rgba(255, 255, 255, 0.05);
+  border: clamp(40px, 8vw, 90px) solid rgba(255, 255, 255, 0.05);
   background: transparent;
-  z-index: 0; /* Ensure circles stay behind content */
-  pointer-events: none; /* This prevents circles from intercepting clicks */
+  z-index: 0; 
+  pointer-events: none; 
 }
 
 .circle-1 {
-  width: 1100px;
-  height: 1100px;
-  top: -600px;
-  right: -400px;
+  width: clamp(300px, 80vw, 800px);
+  height: clamp(300px, 80vw, 800px);
+  top: min(-20vh, -200px);
+  right: min(-15vw, -150px);
 }
 
 .circle-2 {
-  width: 1100px;
-  height: 1100px;
-  bottom: -600px;
-  left: -350px;
-/* Artboard 213 1 */
-
+  width: clamp(300px, 80vw, 800px);
+  height: clamp(300px, 80vw, 800px);
+  bottom: min(-10vh, -100px);
+  left: min(-20vw, -200px);
 }
 
-/* Ensure content stays above circles */
 .App {
   position: relative;
   z-index: 1;

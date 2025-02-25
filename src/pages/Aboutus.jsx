@@ -4,7 +4,9 @@ import Footer from '../components/Footer';
 
 function Aboutus() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0B26]">
+    <div className="min-h-screen flex flex-col">
+      <div className="background-circle circle-1 -z-10 "></div>
+      <div className="background-circle circle-2 -z-10 "></div>
       <Navbar/>
 
       <div className="relative bg-[#CDA454] py-4 mb-6">
@@ -23,8 +25,8 @@ function Aboutus() {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Vision Section */}
           <div>
-            <h2 className="text-[#CDA454] text-xl font-semibold mb-3">VISION</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-[#CDA454] text-2xl font-semibold mb-3">VISION</h2>
+            <p className="text-white/80 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis finibus 
               congue. Vestibulum ornare tellus ut efficitur posuere. Praesent sodales vitae 
               eros eu auctor. Aenean sit amet ultrices dolor. Etiam ullamcorper porttitor 
@@ -34,8 +36,8 @@ function Aboutus() {
 
           {/* Goal Section */}
           <div>
-            <h2 className="text-[#CDA454] text-xl font-semibold mb-3">GOAL</h2>
-            <p className="text-white/80 leading-relaxed">
+            <h2 className="text-[#CDA454] text-2xl font-semibold mb-3">GOAL</h2>
+            <p className="text-white/80 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis finibus 
               congue. Vestibulum ornare tellus ut efficitur posuere. Praesent sodales vitae 
               eros eu auctor. Aenean sit amet ultrices dolor. Etiam ullamcorper porttitor 
@@ -45,14 +47,14 @@ function Aboutus() {
 
           {/* Additional Content */}
           <div className="space-y-6">
-            <p className="text-white/80 leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis finibus 
               congue. Vestibulum ornare tellus ut efficitur posuere. Praesent sodales vitae 
               eros eu auctor. Aenean sit amet ultrices dolor. Etiam ullamcorper porttitor 
               justo vitae rutrum.
             </p>
 
-            <p className="text-white/80 leading-relaxed">
+            <p className="text-white/80 text-lg leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lobortis finibus 
               congue. Vestibulum ornare tellus ut efficitur posuere. Praesent sodales vitae 
               eros eu auctor. Aenean sit amet ultrices dolor. Etiam ullamcorper porttitor 
