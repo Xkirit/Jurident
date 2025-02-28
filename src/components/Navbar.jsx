@@ -26,6 +26,7 @@ const Navbar = () => {
         <div className="hidden md:flex gap-6">
           <Link to="/cases" className={getLinkClass('/cases')}>Home</Link>
           <Link to="/calendar" className={getLinkClass('/calendar')}>Calendar</Link>
+          <Link to="/events" className={getLinkClass('/events')}>Events</Link>
           <Link to="/news" className={getLinkClass('/news')}>News</Link>
           <Link to="/aboutus" className={getLinkClass('/aboutus')}>About Us</Link>
           <Link to="/bareact" className={getLinkClass('/bareact')}>Bare Act PDF</Link>

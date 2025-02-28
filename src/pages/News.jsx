@@ -112,9 +112,9 @@ function News() {
                     <img 
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-24 sm:h-32 md:h-40 object-cover rounded-lg"
+                      className="w-80 h-24 sm:h-32 md:h-52 object-fill rounded-lg"
                     />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-full rounded-lg">
                       <p className="absolute bottom-2 left-2 right-2 text-[10px] sm:text-xs md:text-sm text-white line-clamp-2">
                         {item.title}
                       </p>

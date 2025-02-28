@@ -17,11 +17,13 @@ import ClientSignIn from './pages/ClientSignIn';
 import ClientSignUp from './pages/ClientSignUp';
 import Cases from './pages/Cases';
 import Bareact from './pages/bareact';
+import Events from './pages/Events'
 function App() {
   return (
     <Router>
    
       <Routes>
+        <Route path="/events" element={<Events/>}/>
         <Route path="/tasks" element={<TaskOverview />} />
         <Route path="/calendar" element={<TaskOverview />} />
         <Route path="/faq" element={<Faq />} />
